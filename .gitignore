@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CyberBot.API/bin
+/CyberBot.API/obj/Debug
+/CyberBot.API/CyberBot.API.csproj.user
+/CyberBot.Web/bin
+/CyberBot.Web/obj/Debug
+/CyberBot.Web/CyberBot.Web.csproj.user
+/packages
