@@ -63,3 +63,17 @@ cmd -- *python -m deeppavlov riseapi PATH_TO_THE_FOLDER_YOU_CREATED\env\Lib\site
 > API will be hosted to localhost:9999. You can access it using "localhost:9999/docs".
 
 > We can make this API public using ngrok.
+
+## Contributors:
+
+Aashish Issar
+
+Akshat Agarwal
+
+Deepak Pahuja
+
+Jai Patel
+
+Rahul Srivastava
+
+Vatsala Tandon
