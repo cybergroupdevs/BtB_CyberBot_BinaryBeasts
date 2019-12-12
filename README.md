@@ -4,6 +4,16 @@
 
 Cyber Bot is the AI based chat bot that works on NLP (Natural Language Processing), that means an effective way for user to communicate to system without interference of any human being that ultimately results in flawless and quick performance.
 
+## Technology Stack:
+
+1) Python
+
+2) ASP.NET MVC
+
+3) jQuery
+
+4) DeepPavlov (works on top of tensorflow)
+
 ## Setup Instructions:
 
 **1) Install Python (preferrably version 3.6.8)**
