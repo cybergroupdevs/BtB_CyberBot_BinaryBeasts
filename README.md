@@ -1,10 +1,10 @@
 # Cyber Bot
 
-install python 3.6.8
+Install Python (preferrably version 3.6.8)
 cmd -- pip install virtualenv
 
 // Create virtual environment
->> create a new folder and in command prompt change the directory to that folder
+>> Create a New Folder and in Command Prompt change the directory to that folder
 cmd -- virtualenv env
 
 // Activate virtual environment
@@ -29,7 +29,5 @@ python -- exit()
 -- Activate the environment (if not)
 cmd -- python -m deeppavlov riseapi PATH_TO_THE_FOLDER_YOU_CREATED\env\Lib\site-packages\deeppavlov\configs\squad\squad.json -d -p 9999
 >> API will be hosted to localhost:9999. You can access it using "localhost:9999/docs".
->> We can make this API public using ngrok.
 
-// Open chrome instance allowing CORS
-cmd -- chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
+>> We can make this API public using ngrok.
