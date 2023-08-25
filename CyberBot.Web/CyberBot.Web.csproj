@@ -120,7 +120,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -132,15 +131,36 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="Content\cyber_bot.css" />
     <Content Include="favicon.ico" />
     <Content Include="Files\raw_input.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\before.jpg" />
+    <Content Include="img\blog-1.jpg" />
+    <Content Include="img\blog-2.jpg" />
+    <Content Include="img\blog-3.jpg" />
+    <Content Include="img\bump-collab-colored.jpg" />
+    <Content Include="img\button.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\counter.jpg" />
+    <Content Include="img\customer.jpg" />
+    <Content Include="img\data-analytics.jpg" />
+    <Content Include="img\data.jpg" />
+    <Content Include="img\data.png" />
+    <Content Include="img\hero_image.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\member1.jpg" />
+    <Content Include="img\member4.jpg" />
+    <Content Include="img\mobile-app-development.png" />
+    <Content Include="img\testimonial.png" />
+    <Content Include="img\year.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -159,12 +179,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Messaging\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

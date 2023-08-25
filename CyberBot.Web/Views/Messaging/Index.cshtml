@@ -11,28 +11,63 @@
     <title>Cyber Bot</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    @Styles.Render("~/Content/cyber_bot");
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    @Styles.Render("~/Content/cyber_bot")
+    @Styles.Render("~/Content/custom")
 
 </head>
-<body class="container">
-    <div class="row container-div">
-        <div class="container">
-            <div class="panel panel-primary">
-                <div class="panel-heading" id="accordion">
-                    <span class="glyphicon glyphicon-comment chat-header">Cyber Bot</span>
-                </div>
-                <div class="panel" id="collapseOne">
-                    <div class="panel-body">
-                        <ul class="chat" id="chat-box"></ul>
+<body>
+    @*<div class="row container-div">
+            <div class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="accordion">
+                        <span class="glyphicon glyphicon-comment chat-header">Cyber Bot</span>
                     </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                            <span class="input-group-btn">
-                                <button class="btn btn-warning" id="btn-chat" onclick="getAnswer()">
-                                    Send
-                                </button>
-                            </span>
+                    <div class="panel" id="collapseOne">
+                        <div class="panel-body">
+                            <ul class="chat" id="chat-box"></ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" id="btn-chat" onclick="getAnswer()">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <div class="chatbox">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <div class="col-md-3">
+                <div class="panel">
+                    <div class="panel-heading panel-warning-two" id="accordion">
+                        <span class="glyphicon glyphicon-comment"></span> &nbsp;&nbsp;&nbsp;Chat
+                        <div class="btn-group pull-right">
+                            <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapseOne">
+                        <div class="panel-body">
+                            <ul class="chat" id="chat-box"></ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" id="btn-chat" onclick="getAnswer()">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,13 +75,648 @@
         </div>
     </div>
 
+    <!--Small-Navbar
+    --------------------------------------------
+    -------------------------------------------->
+    <nav class="navbar navbar-inverse visible-1219">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle visible" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="/img/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse small-menu" id="myNavbar">
+                <div class="small-menu-width">
+                    <div class="">
+                        <div class="navbar-menu-logo">
+                            <img src="/img/logo.png">
+                            <a href="" data-target="#myNavbar" class=" pull-right"><i class="fas fa-times"></i></a>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Resource</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Customer Experience CRM</a></li>
+                        <li><a href="#">Data Analytics AI</a></li>
+                        <li><a href="#">Product support QA</a></li>
+                        <!-- 		        <li><a href="#"><i class="fas fa-search"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar
+    --------------------------------------------
+    -------------------------------------------->
+    <nav class="navbar navbar-inverse hidden-1219">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="/img/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Customer Experience CRM</a></li>
+                    <li><a href="#">Data Analytics AI</a></li>
+                    <li><a href="#">Product support QA</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--header
+    --------------------------------------------
+    -------------------------------------------->
+    <header class="hero">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 full_width">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                                <div class="hero-text">
+                                    <h2>We provide business solutions. <span>Grow your new business </span>with cyberGroup.</h2>
+                                    <p>Every growing business depends on technology to maintain its success. that dependence can be a drawback as well</p>
+                                    <button class="hero-button"><span>Discover More</span></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width ">
+                                <div class="hero-image">
+                                    <img src="/img/hero_image.jpg">
+                                    <a href="" class="circle"><i class="fas fa-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Service
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="service">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="heading">
+                        <h5>What We Do</h5>
+                        <h1>OUR SERVICES</h1>
+                    </div>
+                </div>
+            </div>
+            <!--Small-Services
+            --------------------------------------------
+            -------------------------------------------->
+            <div class="Small-Services visible-none">
+                <div class="">
+                    <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+                            <li data-target="#myCarousel1" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="service-sub-block">
+                                            <div class="service-block">
+                                                <i class="fas fa-users fa-4x"></i>
+                                                <h5>Client Experience and CRM</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="service-sub-block">
+                                            <div class="service-block">
+                                                <i class="fas fa-mobile-alt fa-4x"></i>
+                                                <h5>App Development & Integration</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="service-sub-block">
+                                            <div class="service-block">
+                                                <i class="fas fa-layer-group fa-4x"></i>
+                                                <h5>Production Support & quality assurance</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="service-sub-block">
+                                            <div class="service-block">
+                                                <i class="fas fa-chart-pie fa-4x"></i>
+                                                <h5>Data Analytics & Artificial intelligence</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------
+            -------------------------------------------->
+            <div class="row display-none">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 service-sub-block">
+                    <div class="service-block">
+                        <i class="fas fa-users fa-4x"></i>
+                        <h5>Client Experience and CRM</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 service-sub-block">
+                    <div class="service-block">
+                        <i class="fas fa-mobile-alt fa-4x"></i>
+                        <h5>App Development & Integration</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 service-sub-block">
+                    <div class="service-block">
+                        <i class="fas fa-layer-group fa-4x"></i>
+                        <h5>Production Support & quality assurance</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 service-sub-block">
+                    <div class="service-block">
+                        <i class="fas fa-chart-pie fa-4x"></i>
+                        <h5>Data Analytics & Artificial intelligence</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Year
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="year">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="year-image">
+                        <img src="/img/year.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="year-detail">
+                        <h1 class="two">25 YEARS OF EXPERIENCE.</h1>
+                        <h5>WHAT YOU’VE GOT TO OFFER</h5>
+                        <h2>Expert legal advice for your confidence in the future</h2>
+                        <p class="hidden-sm hidden-xs">Every growing business depends on technology to maintain its success. Unfortunately, that dependence can be a drawback as well, especially if the implemented solutions aren’t customized to fit the specific needs of the organization.<span class="hidden-md"> Here at Cyber Group, we offer solutions that are tailored to the needs of each individual client that we work with instead of offering standard, run-of-the-mill solutions to everyone.</span></p>
+                        <p> We work closely with our clients throughout the entire process and offer solutions for a myriad of challenges. Our software consultants are here to help. Here are some of the main services that we offer at Cyber Group.</p><br class="hidden-md"><br>
+                        <a href="" class="hero-button"> Read More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SERVICES-detail
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="ser-detail">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="left-image padding-top">
+                        <img src="/img/customer.jpg" width="100%">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="right-text">
+                        <h1>Customer Experience Consulting and <span> CRM Solutions</span></h1>
+                        <p>A successful company is a company that’s continually trying to improve their customer service. To do this, they need to truly understand who their customers are and be able to effectively address their needs at any given time. We help our clients to better understand their customers’ journeys, identify customer touchpoints and implement CRM solutions that integrate with their existing systems and applications that will fit the needs of their business.</p>
+                        <a href=""><span><i class="fas fa-angle-right"></i></span> See Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-top"></div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 pull-right">
+                    <div class="left-image">
+                        <img src="/img/mobile-app-development.png">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="right-text">
+                        <h1>Application Development and <span>Integration</span></h1>
+                        <p>Our software developers are highly experienced and skilled. They have the ability to build a variety of applications to suit the demands of our clients and their business goals, including web apps, mobile applications, and progressive web apps. Once designed and built, we will make sure that these apps are properly integrated. Additionally, we stay up to date on the latest software development trends to ensure that our team is always implementing the best software development and integration practices.</p>
+                        <a href=""><span><i class="fas fa-angle-right"></i></span> See Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-top"></div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="left-image padding-top">
+                        <img src="/img/data.png" width="100%">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="right-text">
+                        <h1>Data Analytics and <span>Artificial Intelligence</span></h1>
+                        <p>The best business decisions are those that are backed by data. As such, data analytics and artificial intelligence have become important facets of the modern business. Our software consultants can implement a variety of data analytics tools that will collect data from various sources, analyze it, and present it in easy-to-read visualizations. We can also implement AI programs that automate numerous tasks, including the generation and distribution of reports, as well as comb through data to forecast future events and produce.</p>
+                        <a href=""><span><i class="fas fa-angle-right"></i></span> See Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--counter
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="counter-two">
+        <div class="container-custom">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 full_width">
+                    <div class="counter-box">
+                        <div class="counter-detail">
+                            <i class="fas fa-mug-hot"></i>
+                            <h4>Customers</h4>
+                            <p class="counter">2000+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 full_width">
+                    <div class="counter-box">
+                        <div class="counter-detail">
+                            <i class="fas fa-tasks"></i>
+                            <h4>Projects</h4>
+                            <p class="counter">3000+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 full_width">
+                    <div class="counter-box">
+                        <div class="counter-detail">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Views</h4>
+                            <p class="counter">5000+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 full_width">
+                    <div class="counter-box">
+                        <div class="counter-detail">
+                            <i class="fas fa-bug"></i>
+                            <h4>Bugs</h4>
+                            <p class="counter">1000+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--BLOG
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="blog">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="heading">
+                        <h5>Our Latest News</h5>
+                        <h1>READ FROM OUR BLOG</h1>
+                    </div>
+                </div>
+            </div>
+            <!--Small-BLOG
+            --------------------------------------------
+            -------------------------------------------->
+            <div class="Small-Services visible-none">
+                <div class="">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel2" data-slide-to="1"></li>
+                            <li data-target="#myCarousel2" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="blog-box">
+                                                <div class="thumbnail">
+                                                    <div class="thumbnail-image">
+                                                        <img src="/img/blog-1.jpg" width="100%">
+                                                        <div class="date">05 Feb</div>
+                                                    </div>
+                                                    <div class="thumbnail-text">
+                                                        <a href="" class="author">Admin</a>
+                                                        <h5>DATA ANALYTICS</h5>
+                                                        <hr class="hr">
+                                                        <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                                        <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                                        <a href="" class="readmore">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="blog-box">
+                                                <div class="thumbnail">
+                                                    <div class="thumbnail-image">
+                                                        <img src="/img/blog-1.jpg" width="100%">
+                                                        <div class="date">05 Feb</div>
+                                                    </div>
+                                                    <div class="thumbnail-text">
+                                                        <a href="" class="author">Admin</a>
+                                                        <h5>DATA ANALYTICS</h5>
+                                                        <hr class="hr">
+                                                        <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                                        <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                                        <a href="" class="readmore">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="blog-box">
+                                                <div class="thumbnail">
+                                                    <div class="thumbnail-image">
+                                                        <img src="/img/blog-1.jpg" width="100%">
+                                                        <div class="date">05 Feb</div>
+                                                    </div>
+                                                    <div class="thumbnail-text">
+                                                        <a href="" class="author">Admin</a>
+                                                        <h5>DATA ANALYTICS</h5>
+                                                        <hr class="hr">
+                                                        <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                                        <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                                        <a href="" class="readmore">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="blog-box">
+                                                <div class="thumbnail">
+                                                    <div class="thumbnail-image">
+                                                        <img src="/img/blog-1.jpg" width="100%">
+                                                        <div class="date">05 Feb</div>
+                                                    </div>
+                                                    <div class="thumbnail-text">
+                                                        <a href="" class="author">Admin</a>
+                                                        <h5>DATA ANALYTICS</h5>
+                                                        <hr class="hr">
+                                                        <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                                        <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                                        <a href="" class="readmore">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------
+            -------------------------------------------->
+            <div class="row display-none">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="blog-box">
+                        <div class="thumbnail">
+                            <div class="thumbnail-image">
+                                <img src="/img/blog-1.jpg" width="100%">
+                                <div class="date">05 Feb</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <a href="" class="author">Admin</a>
+                                <h5>DATA ANALYTICS</h5>
+                                <hr class="hr">
+                                <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                <a href="" class="readmore">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="blog-box">
+                        <div class="thumbnail">
+                            <div class="thumbnail-image">
+                                <img src="/img/blog-2.jpg" width="100%">
+                                <div class="date">25 jan</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <a href="" class="author">Admin</a>
+                                <h5>SOFTWARE DEVELOPMENT</h5>
+                                <hr class="hr">
+                                <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                <a href="" class="readmore">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 hidden-xs hidden-sm">
+                    <div class="blog-box">
+                        <div class="thumbnail">
+                            <div class="thumbnail-image">
+                                <img src="/img/blog-3.jpg" width="100%">
+                                <div class="date">15 Mar</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <a href="" class="author">Admin</a>
+                                <h5>APPLICATION DEVELOPMENT</h5>
+                                <hr class="hr">
+                                <h4><a href="">It is a long established fact that a reader ...</a></h4>
+                                <p>"A wonderful serenity has taken possssion of my entire souing like these sweet mornng spring …"</p>
+                                <a href="" class="readmore">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Testimonial
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="testimonial">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 full_width">
+                    <div class="heading">
+                        <h5>Our Testimonial</h5>
+                        <h1>CLIENTS SAY ABOUT US</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="testimonial-detail text-center">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <img src="/img/member1.jpg" class="img-circle">
+                                        <h4>Md Nadim Khan</h4>
+                                        <h5>Web Developer</h5>
+                                        <p> Really awesome author. He helped me when I was stuck at some crazy stuff. I can't believe how often he was available to help with huge time difference.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial-detail text-center">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <img src="/img/member4.jpg" class="img-circle">
+                                        <h4>Miss Sana Khan</h4>
+                                        <h5>Web Designer</h5>
+                                        <p> Really awesome author. He helped me when I was stuck at some crazy stuff. I can't believe how often he was available to help with huge time difference.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--NEWS LETTERS
+    --------------------------------------------
+    -------------------------------------------->
+    <section class="newsletter">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="heading">
+                        <h5>Subscribe Newsletter</h5>
+                        <h1>LET'S STAY IN TOUCH</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="suscribe">
+                        <form>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email">
+                            <input type="submit" class="form-control" id="submit" value="Subscribe Now" name="submit">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--footer
+    --------------------------------------------
+    -------------------------------------------->
+    <footer class="footer">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 full_width">
+                    <div class="footer-box">
+                        <h4>About Us :-</h4>
+                        <hr class="hr">
+                        <p>Every growing business depends on technology to maintain its success. Unfortunately, that dependence can be a drawback as well, especially if the implemented solutions aren’t customized to fit the specific needs of the organization. Here at Cyber Group, we offer solutions that are tailored to the needs of each individual client that we work with instead of offering standard</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 full_width">
+                    <div class="footer-box">
+                        <h4>Services :-</h4>
+                        <hr class="hr">
+                        <ul class="ft">
+                            <li><a href="">Customer Experience and CRM</a></li>
+                            <li><a href="">Application Development and Integration</a></li>
+                            <li><a href="">Production Support and QA</a></li>
+                            <li><a href="">Data Analytics and AI</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 full_width">
+                    <div class="footer-box">
+                        <h4>Contact Us :-</h4>
+                        <hr class="hr">
+                        <ul>
+                            <li><a href=""><i class="fas fa-phone"></i>&nbsp; &nbsp;<span>469.916.7730</span></a></li>
+                            <li><a href=""><i class="fas fa-envelope"></i> &nbsp;&nbsp;<span>info@cygrp.com</span></a></li>
+                            <li><a href=""><i class="fas fa-map-marker"></i>&nbsp;&nbsp; <span>Cyber Group India Pvt LTD 30/1 <br>&nbsp;&nbsp; &nbsp;&nbsp; Knowledge Park III Greater Noida.</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    @Scripts.Render("~/bundles/custom");
+
     <script type="text/javascript">
 
-        var modelApiBase = "https://8ff4025c.ngrok.io";
+        var modelApiBase = "https://a713e699.ngrok.io";
         var botFirstMessage = "Hello, I am the Cyber Bot. Ask me questions about this website.";
         var inputFilePath = "/Files/raw_input.txt";
         var noAnswerFoundMessageArray = ["Sorry, I didn't understand that. Could you please try again with a different phrase.",
@@ -119,7 +789,7 @@
 
         function showAnswer(answer) {
             $('#chat-box').append(answer);
-            $("html,body").animate({ scrollTop: $('ul#chat-box li:last').offset().top - 30 });
+            //$("html,body").animate({ scrollTop: $('ul#chat-box li:last').offset().top - 30 });
         }
 
         $('#btn-input').on('keypress', function (e) {

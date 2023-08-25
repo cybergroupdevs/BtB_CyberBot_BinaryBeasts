@@ -26,6 +26,10 @@ namespace CyberBot.Web
             //          "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/cyber_bot").Include("~/Content/cyber_bot.css"));
+            bundles.Add(new StyleBundle("~/Content/custom").Include("~/Content/custom.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                        "~/Scripts/custom.js"));
         }
     }
 }
